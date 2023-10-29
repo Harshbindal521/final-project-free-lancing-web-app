@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+
+{% block cardsender %}
+
+{% for freelancer in li %}
+
+
+  <div class="box mb-5">
+    <div class="image">
+      <img src=/media/{{freelancer.freelancer_photo}}>
+    </div>
+    <div class="name_job">{{freelancer.name}}
+    </div>
+    
+    <h3> {{freelancer.skills}}</h3>
+    <div class="btns">
+      <a  href="freelancerprofile/{{freelancer.username}}"><button class="btns-card btns-card-first">Read More</button></a>
+      <a  href="checkout/{{freelancer.username}}"><button class="btns-card btns-card-last">Hire Me</button></a>
+    </div>
+  </div>
+
+
+{% endfor %}
+
+
+{% endblock cardsender %}

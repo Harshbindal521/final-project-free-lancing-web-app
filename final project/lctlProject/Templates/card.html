@@ -1,0 +1,27 @@
+{% extends 'home.html' %}
+
+{% block cardsender %}
+
+{% for freelancer in li %}
+
+<div class="card mx-auto  mt-2" style="max-width: 840px;">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src=/media/{{freelancer.freelancer_photo}} class="dp m-3" alt="..." >
+                
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h4 class="card-title">{{freelancer.name}}</h4>
+                    <h5 class="card-title">{{freelancer.skills}}</h5>
+                    <p class="card-text">{{freelancer.desc}}</p>
+                   <a href="freelancerprofile/{{freelancer.username}}"><button class="btn btn-primary form-btn"> Visit Profile </button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endfor %}
+
+
+{% endblock cardsender %}
